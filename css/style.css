@@ -1,0 +1,507 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* container */
+.container {
+  background-image: url(../img/background.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.title {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tulisan {
+  width: 500px;
+  text-align: center;
+}
+
+.tulisan h2,
+.tulisan h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.tulisan h2 {
+  font-size: 60px;
+}
+
+.tulisan h4 {
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: -20px;
+}
+
+.tulisan h1 {
+  font-family: "Dongle", sans-serif;
+  font-size: 150px;
+  line-height: 100px;
+}
+
+.title .gambar {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.title .gambar img {
+  width: 250px;
+  position: absolute;
+  right: 550px;
+  transform: translateX(50px);
+  /* cari tau cara menengahan balon kadonya */
+  /* animation: gambarBox 1s linear infinite; */
+}
+
+@keyframes gambarBox {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 10px;
+  }
+  70% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
+
+/* petunjuk */
+.petunjuk {
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  color: #ffff;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 160px;
+  transition: all 0.5s;
+}
+
+.petunjuk p {
+  line-height: 40px;
+  text-decoration: underline;
+}
+
+.wrap-boxkado:active .petunjuk p {
+  /* display: none; */
+  bottom: 2000px;
+}
+
+/* box kado */
+.wrap-boxkado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 350px;
+  height: 200px;
+  width: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+.tutupKado {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.boxKado {
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+
+.wrap-boxkado:hover {
+  top: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+/* gelembung kado */
+.gelembung-kado {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+}
+
+.gelembung-kado img {
+  animation: bubble 6s linear infinite;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.gelembung-kado img:nth-child(1) {
+  animation-delay: 1s;
+  width: 25px;
+}
+
+.gelembung-kado img:nth-child(2) {
+  animation-delay: 2s;
+  width: 30px;
+}
+
+.gelembung-kado img:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.gelembung-kado img:nth-child(4) {
+  animation-delay: 1s;
+  width: 25px;
+}
+
+.gelembung-kado img:nth-child(5) {
+  animation-delay: 3.5s;
+  width: 40px;
+}
+
+.gelembung-kado img:nth-child(6) {
+  animation-delay: 6s;
+  width: 50px;
+}
+
+.gelembung-kado img:nth-child(7) {
+  animation-delay: 4s;
+}
+
+.gelembung-kado img:nth-child(8) {
+  animation-delay: 2s;
+  width: 20px;
+}
+
+.gelembung-kado img:nth-child(9) {
+  animation-delay: 4s;
+}
+
+/* kertas */
+.kertas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -200px;
+}
+
+.kertas img {
+  animation: kertas 10s linear infinite;
+}
+
+@keyframes kertas {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300vh);
+    opacity: 0;
+  }
+}
+
+.kertas img:nth-child(1) {
+  animation-delay: 2s;
+  width: 25px;
+}
+
+.kertas img:nth-child(2) {
+  animation-delay: 1s;
+  width: 10px;
+}
+
+.kertas img:nth-child(3) {
+  animation-delay: 3s;
+  width: 10px;
+}
+
+.kertas img:nth-child(4) {
+  animation-delay: 7s;
+  width: 25px;
+}
+
+.kertas img:nth-child(5) {
+  animation-delay: 6s;
+  width: 40px;
+}
+
+.kertas img:nth-child(6) {
+  animation-delay: 2.5s;
+  width: 20px;
+}
+
+.kertas img:nth-child(7) {
+  animation-delay: 3.5s;
+}
+
+.kertas img:nth-child(8) {
+  animation-delay: 2s;
+  width: 20px;
+}
+
+.kertas img:nth-child(9) {
+  animation-delay: 0.5s;
+}
+
+.kertas img:nth-child(10) {
+  animation-delay: 8s;
+}
+
+.kertas img:nth-child(11) {
+  animation-delay: 5s;
+}
+
+.kertas img:nth-child(12) {
+  animation-delay: 4s;
+}
+
+.audio {
+  display: none;
+}
+
+/* buku ucapan */
+.wrap-bukuUcapan {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.tampilanBukuUcapan {
+  display: inline-block;
+}
+
+.gambarDysa {
+  width: 250px;
+  position: absolute;
+  opacity: 0;
+}
+
+.wrap-bukuUcapan img:nth-child(1) {
+  top: 10px;
+  right: 10px;
+}
+
+.wrap-bukuUcapan img:nth-child(2) {
+  top: 270px;
+  right: 10px;
+}
+
+.wrap-bukuUcapan img:nth-child(3) {
+  top: 10px;
+  left: 10px;
+}
+
+.wrap-bukuUcapan img:nth-child(4) {
+  top: 270px;
+  left: 10px;
+}
+
+.wrap-bukuUcapan img {
+  animation: gambarDysa 6s linear infinite;
+}
+
+@keyframes gambarDysa {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.wrap-bukuUcapan img:nth-child(1) {
+  animation-delay: 4s;
+}
+
+.wrap-bukuUcapan img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.wrap-bukuUcapan img:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.wrap-bukuUcapan img:nth-child(4) {
+  animation-delay: 3s;
+}
+
+/* Book */
+.wrap-book {
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: sans-serif;
+  background-color: powderblue;
+}
+
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+}
+
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+
+.halaman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.halaman p {
+  text-align: center;
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+
+.front,
+.back {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid powderblue;
+}
+
+.back {
+  z-index: 0;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-content {
+  transform: rotateY(180deg);
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover i {
+  color: #636363;
+}
+
+i {
+  font-size: 50px;
+  color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+  z-index: 3;
+}
+
+#p2 {
+  z-index: 2;
+}
+
+#p3 {
+  z-index: 1;
+}
