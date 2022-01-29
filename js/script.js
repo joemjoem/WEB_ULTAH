@@ -1,20 +1,23 @@
-// let boxKado = document.getElementsByClassName("wrap-boxkado");
-// let bukuUcapan = document.getElementsByClassName("wrap-bukuUcapan");
-// boxKado[0].addEventListener('click', function(){
-//   bukuUcapan[0].classList.toggle("tampilanBukuUcapan")
-// });
-
 $('.wrap-boxkado').on('click', function(){
-  $('.wrap-bukuUcapan').toggle("tampilanBukuUcapan");
-  $('.wrap-bukuUcapan').append(`      <div class="audio">
-  <audio controls autoplay>
+    $('.wrap-bukuUcapan').toggle("tampilanBukuUcapan");
+    $('.wrap-bukuUcapan').append(`<div class="audio">
+        <audio controls autoplay loop>
+            <source
+            src="src/audio/ultahSong.mp3"
+            type="audio/mpeg"
+            type="audio/mp3"/>
+        </audio>
+    </div>`);
+
+    $('.lagu1').html(`
+    <audio controls mute>
     <source
-      src="src/audio/ultahSong.mp3"
-      type="audio/mpeg"
-      type="audio/mp3"
-    />
-  </audio>
-</div>`);
+        src="src/audio/ultahSong.mp3"
+        type="audio/mpeg"
+        type="audio/mp3"/>
+    </audio>
+    `);
+
 });
 
 // References to DOM Elements
